@@ -92,7 +92,8 @@ $mainColor :#48C9B0;
 		position:relative;
 		display:inline-block;
 		border: 1px solid rgba(255,150,150,1);
-		width:100%;
+		width:1200px;
+		left: calc(50% - 1200px / 2);
 
 		> i {
 			display: inline-block;
@@ -128,6 +129,9 @@ $mainColor :#48C9B0;
 				
 			}
 		}
+		button {
+			z-index:2;
+		}
 		.info {
 			position: relative;
 			display: inline-block;
@@ -146,11 +150,11 @@ $mainColor :#48C9B0;
 				color:white;
 				font-size:20px;
 				border-radius: 50%;
-				
 				text-align: center;
 				line-height: 40px;
 				box-shadow: 1px 1px 2px rgba(0,0,0,.4);
 				text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+				z-index: 1;
 			}
 
 			> time {
@@ -160,12 +164,12 @@ $mainColor :#48C9B0;
 				width:110px;
 			
 				top: 0;
-				left: calc(50% - #{$iconsize} / 2 - 110px);
+				
 				font-size: 14px;
 				padding:3px 5px;
 				font-weight: 600;
 				color:rgba(111,111,111,.8);
-				text-align: right;
+	
 
 				&::before {
 					display: inline-block;
@@ -185,7 +189,7 @@ $mainColor :#48C9B0;
 
 			.card {
 				display: inline-block;
-				float:right;
+				
 				top:0;
 				width: calc(50% - #{$iconsize + 10px} / 2);
 				min-height: 45px;
@@ -193,8 +197,10 @@ $mainColor :#48C9B0;
 				text-align: left;
 				border-radius: 5px;
 				box-shadow: 1px 1px 5px rgba(0,0,0,.3);
-				&:after, &:before {
 
+				z-index: 3;
+				&:after, &:before {
+					z-index: 3;
 					right: calc(50% - #{$iconsize + 12px} / 2);
 					top: 19px;
 					border: solid transparent;
@@ -217,7 +223,25 @@ $mainColor :#48C9B0;
 					border-width: $t;
 					margin-top: -$t;
 				}
+				img {
+					width:45px;
+					height:45px;
+					border-radius: 10px;
+					float:left;
+					margin-top : 6px;
+					margin-left: 6px;
+					margin-bottom: 6px;
+					+ h3 {
+						float:left;
+						padding : 0 8px;
+						width: calc(100% - (45px + 6px));
+						margin-top : 6px;
+					}
 
+					+ p {
+
+					}
+				}
 				h3, p, div {
 					display: inline-block;
 					width:100%;
@@ -258,8 +282,59 @@ $mainColor :#48C9B0;
 				    cursor: pointer;
 				}
 			}
-		}
 
+			&:nth-child(2n + 3) {
+				> time {
+					left: calc(50% - #{$iconsize} / 2 - 110px);
+					text-align: right;
+				}
+
+				.card {
+					float:right;
+				}
+
+			}
+			&:nth-child(2n + 4) {
+				 > time {
+				 	right: calc(50% - #{$iconsize} / 2 - 110px);
+					text-align:left;
+					&:before {
+						left:5px;
+						right:0;
+					}
+				}
+				 .card {
+					float:left;
+					
+					$t:7px;
+					&:after, &:before {
+						left: calc(50% - #{$iconsize + 12px} / 2);
+						top: 19px;
+						border: solid transparent;
+						content: " ";
+						height: 0;
+						width: 0;
+						position: absolute;
+						pointer-events: none;
+					}
+
+					&:after {
+						border-color: transparent;
+						border-left-color:  rgba(255,255,255,1);
+						border-width: $t;
+						margin-top: -$t;
+					}
+					&:before {
+						border-color: transparent;
+						border-left-color:  rgba(200,200,200,1);
+						border-width: $t;
+						margin-top: -$t;
+					}
+				}
+			}
+
+
+		}
 	}
 	
 }
