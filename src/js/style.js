@@ -2,11 +2,7 @@ $(function() {
 	var $infos = $('#infos');
 
 	$('#load').click(function() {
-		console.log('123');
 		$infos.append(create());
-
-
-
 	});
 });
 
