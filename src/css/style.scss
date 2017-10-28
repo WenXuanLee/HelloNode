@@ -555,6 +555,94 @@ $mainColor :#48C9B0;
 		}
 	}
 }
+
+#contact {
+	background-color: white;
+
+	>.container {
+		width:100%;
+	}
+
+	.profile-photo {
+		border-radius:50%;
+		width:275px;
+		height:275px;
+		background-image: url(../img/profile.jpg);
+		background-size: cover;
+		margin: 0 auto;
+		margin-bottom: 3%;
+		border: 2px solid rgba(111,111,111,.5);
+		
+	}
+	.title-group {
+		display:flex;
+		flex-direction:column;
+		width:50%;
+		margin:0 auto;
+		 .title-heading {
+
+		 	> h1,p {
+			font-family: 'Signika', sans-serif;
+			font-size:32px;
+			font-weight: 900;
+			color:rgba(22,22,22,1);
+			}
+		}
+
+		.title-subtitle {
+
+			> p > a {
+				
+				font-size:18px;
+				text-decoration: none;
+				cursor:pointer;
+				color: #2861b2;
+
+				&:hover {
+					filter:brightness(120%);
+				}
+			
+			}
+		}
+	}
+
+	.social-links {
+		display:flex;
+		justify-content:center;
+
+		.social-icon {
+			width:180;
+			height:180px;
+			text-align: center;
+			i {
+				width:180px;
+				height:180px;
+				line-height: 180px;
+				font-size:100px;
+				cursor:pointer;
+			}
+		}
+		.social-fb {
+
+			> a {
+				color:#0e1f56;
+			}
+		}
+		.social-github {
+
+			> a {
+				color :#008080;
+			}
+		}
+		.social-gmail {
+
+			> a {
+				color:#c71610;
+			}
+			
+		}
+	}
+}
 .section-5 {
 	position:relative;
 	background-color: white;
