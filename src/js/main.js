@@ -17,4 +17,17 @@ window.onload = function() {
 	console.log(n);
 	m1();
 	m2();
+
+
+
+	// let x;
+	// for (let i = 0; i < 10; i++) {
+	// 	x = 'foo';
+	// }
+	// console.log(i); //error
+
+	// let y = 10;
+	// if(true) {
+	// 	y++; //error, the value of const could not be modified.
+	// }
 };

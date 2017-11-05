@@ -15,7 +15,7 @@ module.exports = {
     rules : [
       {
         test:/\.js$/, //看JS結尾的file
-        exclude: [/node_modules],
+        exclude: [/node_modules/],
         use: [
           {
             loader: 'babel-loader',
