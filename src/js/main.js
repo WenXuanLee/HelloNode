@@ -9,7 +9,7 @@
 // console.log(_.join(['Hello', 'Node.js'],' '));
 // console.log(m.name);
 // console.log(m.version);
-
+// import 'babel-polyfill';
 import m1, {n} from './module-1.js';
 import m2 from './module-2.js';
 
