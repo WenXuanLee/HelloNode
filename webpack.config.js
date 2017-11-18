@@ -20,13 +20,8 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                [
-                  'es2015', {
-                    modules: false //不要看module的檔案
-                  }
-                ]
-              ]
+              presets: [['es2015', {modules: false }]],//不要看module的檔案
+              plugins: ['transform-class-properties']
             }
           }
         ]
